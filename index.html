@@ -1,18 +1,65 @@
 
 <!--First HTML Website-->
 <!DOCTYPE = html>
-<html>
+<html lang="en-us">
 <head>
 	<title>Agryle.io</title>
 	<meta charser="UTF-8">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<h1>Kyle Gray</h1>
+<body id="home">
+	<script>window.alert("Website Under Mainenance")</script>
+	<ul id="searchbar">
+	<li><a href="#home" onclick="this.innerHTML='Nothing'">Home</a></li>
+	<li><a href="#myWork">My Work</a></li>
+	<li><a href="#aboutMe">About Me</a></li>
+	<li><a href="#contact">Contact</a></li>
+	</ul>
+	<h2>Kyle Gray</h2>
 	<p1 title ="Come back later">Website Under Maintenance</p1><hr>
-	<h2>About Me</h2><hr>
-	<h2>My Work</h2><hr>
-	<h2>Contact</h2><hr>
+	<h2 id="aboutMe">About Me</h2><hr>
+	<canvas id="game" width="480" height="320">
+	<script src="scripts/game.js"></script>
+	</canvas>
+	<h2 id="myWork">My Work</h2>
+		<table id="myWork" style="width:50%">
+			<tr>
+				<th>StartUp Weekend</th>
+				<th>2D Simulation Game</th>
+				<th>Order Management System</th>
+			</tr>
+			<tr>
+				<td><ul style="list-style-type:circle">
+					<li>Created test app for raising credit score through credit card managment.</li>
+					<li>Implemented using Node, React-Native, PostgreSQL, HTML, and CSS.</li>
+					<li>Created algorithm to pay off debts and then adjusting extra to proper cards</li>
+				</ul></td>
+				<td><ul style="list-style-type:circle">
+					<li>Wrote JavaFX program for simple 2D Car Game</li>
+					<li>Created Custom image loader with Transparency</li>
+					<li>Multi-threading implementation</li>
+				</ul></td>
+				<td><ul style="list-style-type:circle">
+					<li>Created two programs for order managment i.e. Taking orders and managing</li>
+					<li>Implemented Multi-Threading, Server File Fetching, and Stacks and Queues</li>
+					<li>Both programs work asynchronously</li>
+				</ul></td>
+			</tr>
+		</table><hr>
+	<h2 id="contact">Contact</h2>
 		<a href ="https://github.com/GoPro16"><img src="https://dl2.macupdate.com/images/icons256/39062.png" alt="https://github.com/GoPro16"  width ="50" height="50"></a>
+		<form action="action_page.php">
+		First name:<br>
+		<input type="text" name="firstName"><br>
+		Last name:<br>
+		<input type="text" name="lastName"><br>
+		Email:<br>
+		<input type="text" name="email"><br>
+		<input type="submit" value="Submit"><br>
+		</form>
+
+	<footer id ="footer">Copyright @Agryle.io<br>
+			<script>document.getElementById('footer').innerHTML=Date()</script>
+	</footer>
 </body>
 </html>

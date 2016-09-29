@@ -1,5 +1,53 @@
+ul#searchBar{
+	list-style-type: none;
+	margin: -10;
+	padding: 10;
+	overflow: hidden;
+	position: fixed;
+	background-color:#F7E5C6;
+	background:linear-gradient(to bottom right, #F7E5C6, white);
+	border: 1px solid;
+	border-radius: 5px;
+	border-style: groove;
+}
+
+ul#searchBar li{
+	float:left;
+}
+
+ul#searchBar li a{
+	display: powderblue;
+	color:black;
+	text-align:center;
+	padding: 16px;
+	text-decoration: none;
+}
+
+ul#searchbar li a:hover{
+	background-color: :#111111;
+}
+
 body{
-	background-color:grey;
-	color:white;
+	background-image:url("background.jpg");
+	background-repeat: no-repeat;
+	box-shadow: 5px 2px 4px rgba(0,0,0,.5);
+	background-size:cover;
+	color:black;
 	font-family: verdana;
 }
+
+table, th, td{
+	border: 1px solid black;
+	text-align: left;
+	padding: 10px;
+	width: 50px;
+}
+
+table#myWork th{
+	background-color:powderblue;
+}
+
+canvas{
+	background:#eee;
+}
+
