@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Color Game</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Color Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
 </head>
-
 <body>
-    <h1>The Great<br />
-      <span id="colorDisplay">RGB</span><br />
-       Color Game</h1>
+    <div class="landing-page">
+        <h1>Kyle Gray <h1>
+        <p>Welcome to my personal website! Enjoy!</p>
+        <hr>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Kyle Gray</a>
+        </div>
 
-    <div id="stripe">
-      <button id="reset">New Colors</button>
-      <span id="message"></span>
-      <button class="mode">Easy</button>
-      <button class="mode selected">Hard</button>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  <!-- Body starts here!-->  
+
+  <div>
+    <div class="info">
+      <p>Click any box to expand and find out more info.
+    </div>
+    <div class="row text-center" style="display:flex;flex-wrap: wrap;">
+    <!-- Header of rows-->
+      <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="http://i.imgur.com/OBxPR4N.png">
+          <div class="caption">
+            <h4>Minecraft Project</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="aboutMe">
+      <img class="profilePic" align="left" src="https://avatars2.githubusercontent.com/u/14143881?v=3&s=460">
+      <h3>About Me</h3>
+      <p>I attend the University of North Florida</p>
     </div>
 
-    <div class="container">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-    </div>
-    <script type="text/javascript" src="logic.js"></script>
+  </div>
+
+
+    
+  <script type="text/javascript" src="logic.js"></script>
+  
 </body>
 </html>
