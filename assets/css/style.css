@@ -1,0 +1,157 @@
+body{
+font-family:'Droid Serif';
+
+
+background: darkgray; /* fallback for old browsers */
+     
+-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.welcome{
+	background:#272b30;
+	margin-top: 50px;
+}
+h1,h2,h3,h4,h5{
+font-family:'Droid Serif';
+}
+
+.form-control{
+	width: 60%;
+}
+
+#inputEmail{
+	width:30%;
+}
+
+
+.portfolio{
+	color:white;
+	font-family:'Droid Serif';
+	background:#272b30;
+}
+
+
+
+.aboutMe{
+	background:#1c1e22;
+	color:white;
+	border: solid 1px #1c1e22;
+}
+#aboutMeText{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.contact{
+	background:#272b30;
+	text-align: center;
+	color:white;
+}
+
+.row{
+	margin:0px auto;
+}	
+
+
+.col-lg-12{
+	padding: 0px 0px;
+}
+
+.row .row{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.roadMap{
+	color:white;
+	background: darkgrey;
+}
+
+/*When hovered over */
+.thumbnail:hover{
+border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+        box-shadow: 1px 1px 5px #999;
+}
+
+window.scroll({
+  top: 2500, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+
+
+/*Scroll certain amounts from current position */
+window.scrollBy({ 
+  top: 100, /* could be negative value*/
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+
+.profilePic {
+ display: block;
+}
+.form-horizontal{
+	color:white;
+	align-items:center;
+}
+
+.media-object{
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.media-object{
+
+}
+
+.media-heading{
+	color:white;
+}
+
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px grey;
+    margin-left: 22%;
+    margin-right:22%;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
