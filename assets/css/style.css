@@ -2,11 +2,9 @@ body{
 font-family:'Droid Serif';
 
 
-
-
-background: #70e1f5; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #70e1f5 , #ffd194); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #70e1f5 , #ffd194); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #e52d27; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #e52d27 , #b31217); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #e52d27 , #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
 -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -45,8 +43,11 @@ background: linear-gradient(to left, #70e1f5 , #ffd194); /* W3C, IE 10+/ Edge, F
 }
 
 .welcome{
-	background:#232323;
+	background:#272b30;
 	margin-top: 50px;
+}
+h1,h2,h3,h4,h5{
+font-family:'Droid Serif';
 }
 
 .form-control{
@@ -59,19 +60,25 @@ background: linear-gradient(to left, #70e1f5 , #ffd194); /* W3C, IE 10+/ Edge, F
 
 
 .portfolio{
-	color:black;
-	background:transparent;
+	color:white;
+	font-family:'Droid Serif';
+	background:#272b30;
 }
 
 
 
 .aboutMe{
-	background:#F53240;
+	background:#1c1e22;
 	color:white;
+	border: solid 1px #1c1e22;
+}
+#aboutMeText{
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .contact{
-	background:#232323;
+	background:#272b30;
 	text-align: center;
 	color:white;
 }
@@ -91,7 +98,8 @@ background: linear-gradient(to left, #70e1f5 , #ffd194); /* W3C, IE 10+/ Edge, F
 }
 
 .roadMap{
-	background: grey;
+	color:white;
+	background: darkgrey;
 }
 
 /*When hovered over */
@@ -137,4 +145,15 @@ window.scrollBy({
 
 .media-heading{
 	color:white;
+}
+
+hr.style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px grey;
+    margin-left: 22%;
+    margin-right:22%;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
 }

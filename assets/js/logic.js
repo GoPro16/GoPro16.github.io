@@ -1,7 +1,7 @@
 var projects =
 [
 	{name: "Java Racing Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
-	{name: "",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
+	{name: "No Name",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
 	{name: "Minecraft P2 Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"Third project test"},
 	{name: "Java P2 Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Fourth project test"},
 	{name: "Java Space Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
