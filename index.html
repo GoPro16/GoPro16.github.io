@@ -24,21 +24,27 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#welcome">Welcome <span class="sr-only">(current)</span></a></li>
+        <li><a href="#welcome">Welcome</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#aboutMe">About</a></li>
         <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#roadMap">Roadmap</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
 
 <!--Body starts here -->
+<div class="container">
 <div class="row">
   <div class="col-lg-12 welcome" id="main">
-    <h1>Kyle Gray</h1>
-    <p>Welcome to my website! Click on any project to expand and 
-      get details.</p>
+    <div class="jumbotron"> 
+      <h1 style="font-family:'Droid Serif'">Kyle Gray</h1>
+      <p style="font-family:'Droid Serif'"> Welcome to my website! Click on any project to expand and 
+        get details.</p>
+      </div>
   </div>
   <div class="col-lg-12 portfolio" id="portfolio">
     <h1 style="text-align:center" id="Header-Portfolio">Portfolio</h1>
@@ -48,20 +54,56 @@
     </div>
   <div class="col-lg-12 aboutMe" id="aboutMe">
     <h3>About Me</h3>
+    <h5 style="font-family:'Droid Serif'; color:white">Hi! My name is Kyle and I am a student at the University of North Florida majoring in computer science. 
+    Programming is not only what i pursue but what I am passionate about. It is like a hobby that's a job.<br><br>
+    <em>"Choose a job you love, and you will never have to work a day in your life."<br>-Confucius</em><br><br>My school teaches the core concepts of 
+    programming, as well as the ethics behind it. I would like to call myself a Java developer mostly due to the massive amounts of 
+    side projects that I do. However, web development is growing on me and I really enjoyed putting my website together. I am aspiring to be a
+    full stack developer. Whether it be for a small start-up, or a large corporation, I would be stoked to be part of something bigger than myself. 
+    <br></br>I am going to start a blog in the future and write blogs about the curiculum that I am learning in school. This will serve as an educational
+    blog to anyone that has interest in the field or needs additional knowledge on a topic. 
+    </h5>
+  </div>
+  <div class="col-lg-12 roadMap" id="roadMap">
+    <h3>Roadmap Coming Soon!</h3>
+    <h5 style="font-family:'Droid Serif'; color:white">
+      This roadmap will serve to show personal goals within computing as well as goals for the website itself.
+    </h5>
+    <div class="progress progress-striped active">
+      <div class="progress-bar progress-bar-warning" style="width: 45%">Website Completion 45%</div>
+    </div>
   </div>
   <div class="col-lg-12 contact" id="contact">
     <h3>Contact Information</h3>
-    <ul>
-      <li>Email<a href="mailto:kyle@agryle.io" target="_top">   kyle@agryle.io</a></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <h5 style="font-family:'Droid Serif'; color:white">
+      Get in touch with me! Even if you have a reccomendation I would love to hear your feedback.
+    </h5>
+    <form class="form-horizontal">
+      <fieldset>
+        <div class="form-group" >
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+          <div class="col-lg-10">
+            <textarea class="form-control" rows="3" id="textArea" placeholder="Message"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="reset" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
   </div>
 </div>
-
-
-    
-  <script type="text/javascript" src="logic.js"></script>
+</div>
+  <script type="text/javascript" src="assets/js/logic.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </body>
 </html>

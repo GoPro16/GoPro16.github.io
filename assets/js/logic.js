@@ -1,17 +1,17 @@
 var projects =
 [
-	{name: "Minecraft Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
-	{name: "Java Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
+	{name: "Java Racing Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
+	{name: "",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
 	{name: "Minecraft P2 Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"Third project test"},
 	{name: "Java P2 Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Fourth project test"},
-	{name: "Minecraft Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
+	{name: "Java Space Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
 	{name: "Java Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
 	{name: "Minecraft P2 Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"Third project test"},
 	{name: "Java P2 Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Fourth project test"}
 ];
 function addProjects(){
 	projects.forEach(function(project){
-	$(".row .row").append('<div class="col-lg-3 col-md-4 col-sm-6"><div class="thumbnail"><img src="'+project.image+'"><div class="caption"><h4>'+project.name+'</h4></div></div></div>');
+	$(".row .row").append('<div class="col-lg-3 col-md-6 col-sm-12"><div class="thumbnail"><img src="'+project.image+'"><div class="caption"><h4>'+project.name+'</h4></div></div></div>');
 });
 }
 
