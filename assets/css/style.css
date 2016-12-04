@@ -2,10 +2,8 @@ body{
 font-family:'Droid Serif';
 
 
-background: #e52d27; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #e52d27 , #b31217); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #e52d27 , #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+background: darkgray; /* fallback for old browsers */
+     
 -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
