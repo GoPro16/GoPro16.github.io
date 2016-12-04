@@ -1,57 +1,58 @@
 body{
-	padding-top:20px;
+font-family:'Droid Serif';
+background: #232323;
 }
 
-
-.landing-page{
-	background-image: url("http://eskipaper.com/images/cliff-9.jpg");
-	width:100%;
-	display:block;
-	margin: auto;
+.welcome{
+	background:#E37222;
+	margin-top: 50px;
 }
 
-.info{
-	background:#E6E4E6;
+.portfolio{
 	color:black;
-	height:50px;
-}
-
-.introImage{
-	width:100%;
-	display:block;
-	size:100% auto;
-	opacity: .7;
-}
-
-
-.ul{
-	text-align: center;
-}
-
-.profilePic{
-	width:200px;
-	height:200px;
-	padding:5px 5px;
-}
-
-.nav{
-	background: #232323;
+	background:white;
 }
 
 .aboutMe{
-	background:#232323;
-	height:200px;
-	color:white;
-}
-.container{
-	background:black;
-	padding-bottom: 0px;
+	background:#07889B;
 }
 
-hr{
-	border-top: 3px double #75e1ef;
-	margin:auto 50px;
-	height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(117, 225, 239, 0.5);
+.contact{
+	background:#EEAA7B;
 }
+
+.row{
+	margin:0px auto;
+}	
+
+
+
+.col-lg-12{
+	padding: 0px 0px;
+}
+
+.row .row{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+/*When hovered over */
+.thumbnail:hover{
+border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+        box-shadow: 1px 1px 5px #999;
+}
+window.scroll({
+  top: 2500, 
+  left: 0, 
+  behavior: 'smooth' 
+});
+
+// Scroll certain amounts from current position 
+window.scrollBy({ 
+  top: 100, // could be negative value
+  left: 0, 
+  behavior: 'smooth' 
+});
+
