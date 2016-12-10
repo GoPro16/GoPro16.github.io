@@ -2,7 +2,7 @@ body{
 font-family:'Droid Serif';
 
 
-background: darkgray; /* fallback for old browsers */
+background: gray; /* fallback for old browsers */
      
 -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -42,7 +42,6 @@ background: darkgray; /* fallback for old browsers */
 
 .welcome{
 	background:#272b30;
-	margin-top: 50px;
 }
 h1,h2,h3,h4,h5{
 font-family:'Droid Serif';
@@ -76,9 +75,10 @@ font-family:'Droid Serif';
 }
 
 .contact{
-	background:#272b30;
+	background:#1c1e22;
 	text-align: center;
 	color:white;
+	margin-bottom: 0px;
 }
 
 .row{
@@ -86,19 +86,16 @@ font-family:'Droid Serif';
 }	
 
 
-.col-lg-12{
+.col-lg-12 {
 	padding: 0px 0px;
 }
 
 .row .row{
+	text-align: center;
 	display:flex;
 	flex-wrap:wrap;
 }
 
-.roadMap{
-	color:white;
-	background: darkgrey;
-}
 
 /*When hovered over */
 .thumbnail:hover{
@@ -154,4 +151,8 @@ hr.style-five {
 }
 hr.style-five:after {  /* Not really supposed to work, but does */
     content: "\00a0";  /* Prevent margin collapse */
+}
+
+hr{
+	    border-top: 1px solid white;
 }

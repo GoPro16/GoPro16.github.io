@@ -1,17 +1,12 @@
 var projects =
 [
-	{name: "Java Racing Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
-	{name: "No Name",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
-	{name: "Minecraft P2 Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"Third project test"},
-	{name: "Java P2 Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Fourth project test"},
-	{name: "Java Space Game",image: "http://i.imgur.com/OBxPR4N.png",desc:"First project test"},
-	{name: "Java Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Second project test"},
-	{name: "Minecraft P2 Project",image: "http://i.imgur.com/OBxPR4N.png",desc:"Third project test"},
-	{name: "Java P2 Project",image:"http://i.imgur.com/mTQQKVH.png",desc:"Fourth project test"}
+	{name: "Personal Website",desc:"This is my first go at a personal website using Bootstrap, jquery, javascript, html and css. Looking forward to creating more web applications in the future"},
+	{name: "Java 2D Game",desc:"Space Game project utilizing linked lists to implement open world gameplay. Still a work in progress. This project is a compilation of all the techniques I have learned in school thus far."},
+	{name: "No Name",desc:"Working on a new application for web and mobile platforms. I have yet to announce a clear topic, however the source code is available."}
 ];
 function addProjects(){
 	projects.forEach(function(project){
-	$(".row .row").append('<div class="col-lg-3 col-md-6 col-sm-12"><div class="thumbnail"><img src="'+project.image+'"><div class="caption"><h4>'+project.name+'</h4></div></div></div>');
+	$(".row .row").append('<div class="col-lg-4 col-md-4 col-sm-4"><div class="thumbnail"><h4>'+project.name+'</h4><hr class="projDesc"><p>'+project.desc+'</p></div></div></div>');
 });
 }
 
