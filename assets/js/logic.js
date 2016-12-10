@@ -12,23 +12,6 @@ function addProjects(){
 
 addProjects();
 
-var activeProjects = document.querySelectorAll(".thumbnail");
-
-
-activeProjects.forEach(function(item){
-	$(item).click(function(){
-		var n = $(".thumbnail").length;
-		console.log(n);
-		if(n == 1){
-			console.log("1 element");
-		}else{
-			console.log("more the one element");
-			$(".thumbnail").remove();
-			$(".row .row").hide().append(item).fadeIn(100);
-			document.querySelector('#Header-Portfolio').scrollIntoView();
-		}
-	});
-});
 
 
 $(document).ready(function(){
