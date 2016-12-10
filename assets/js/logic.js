@@ -1,12 +1,12 @@
 var projects =
 [
-	{name: "Personal Website",desc:"This is my first go at a personal website using Bootstrap, jquery, javascript, html and css. Looking forward to creating more web applications in the future"},
-	{name: "Java 2D Game",desc:"Space Game project utilizing linked lists to implement open world gameplay. Still a work in progress. This project is a compilation of all the techniques I have learned in school thus far."},
-	{name: "No Name",desc:"Working on a new application for web and mobile platforms. I have yet to announce a clear topic, however the source code is available."}
+	{name: "Personal Website",link:"https://github.com/GoPro16/GoPro16.github.io",desc:"This is my first go at a personal website using Bootstrap, jquery, javascript, html and css. Looking forward to creating more web applications in the future"},
+	{name: "Java 2D Game",link:"https://github.com/GoPro16/SpaceGame",desc:"Space Game project utilizing linked lists to implement open world gameplay. Still a work in progress. This project is a compilation of all the techniques I have learned in school thus far."},
+	{name: "Mobile App",link:"https://github.com/GoPro16/desktopGame",desc:"Working on a new application for web and mobile platforms. Still in the process of learning the new skills and techniques. Source code will be avaiable as soon as possible."}
 ];
 function addProjects(){
 	projects.forEach(function(project){
-	$(".row .row").append('<div class="col-lg-4 col-md-4 col-sm-4"><div class="thumbnail"><h4>'+project.name+'</h4><hr class="projDesc"><p>'+project.desc+'</p></div></div></div>');
+	$(".row .row").append('<div class="col-lg-4 col-md-4 col-sm-4"><a href="'+project.link+'" target="_blank"><div class="thumbnail"><h4>'+project.name+'</h4><hr class="projDesc"><p>'+project.desc+'</p></div></a></div>');
 });
 }
 

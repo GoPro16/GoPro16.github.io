@@ -1,9 +1,14 @@
 body{
+	margin-top: 10px;
 font-family:'Droid Serif';
 
 
-background: gray; /* fallback for old browsers */
-     
+
+
+background: #bdc3c7; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -38,6 +43,10 @@ background: gray; /* fallback for old browsers */
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+a:hover{
+	text-decoration: none;
 }
 
 .welcome{
@@ -91,9 +100,16 @@ font-family:'Droid Serif';
 }
 
 .row .row{
-	text-align: center;
 	display:flex;
 	flex-wrap:wrap;
+}
+
+.row .row h4{
+text-align: center;
+}
+
+.row .row p{
+	margin-left: 5px;
 }
 
 
