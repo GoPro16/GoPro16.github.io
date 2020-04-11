@@ -19,13 +19,14 @@ const ThemeContext = createContext([
 ]);
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(defaultTheme);
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     try {
-      setTheme(localStorage.getItem("browser-theme") || defaultTheme);
-    } catch (err) {}
-  }, []);
+      return localStorage.getItem("browser-theme");
+    } catch (err) {
+      return "dark";
+    }
+  });
+
 
   const cssModule = useMemo(() => themeConfig(theme === "dark"), [theme]);
 
