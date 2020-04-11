@@ -1,17 +1,17 @@
-import React, { createContext, useState, useContext, useEffect, useMemo } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useMemo
+} from "react";
 
 const themeConfig = isDark => ({
   "bg-color": isDark ? "bg-dark" : "bg-light",
-  "text-color": isDark ? 'text-white' : 'text-dark'
+  "text-color": isDark ? "text-white" : "text-dark"
 });
 
-let defaultTheme;
-
-try {
-  defaultTheme = localStorage.getItem("browser-theme") || 'dark'
-} catch(err) {
-  defaultTheme = 'dark'
-}
+const defaultTheme = "dark";
 
 const ThemeContext = createContext([
   defaultTheme,
@@ -22,12 +22,10 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
-    try{
-      if (localStorage.getItem("browser-theme") !== theme) {
-        localStorage.setItem("browser-theme", theme);
-      }
-    }catch(err) {}
-  }, [theme]);
+    try {
+      setTheme(localStorage.getItem("browser-theme") !== theme);
+    } catch (err) {}
+  }, []);
 
   const cssModule = useMemo(() => themeConfig(theme === "dark"), [theme]);
 
@@ -36,14 +34,28 @@ const ThemeProvider = ({ children }) => {
       value={[
         theme,
         cssModule,
-        () => setTheme(t => (t === "dark" ? "light" : "dark"))
+        () =>
+          setTheme(t => {
+            const nextState = t === "dark" ? "light" : "dark";
+
+            localStorage.setItem("browser-theme", nextState);
+
+            return nextState;
+          })
       ]}
     >
       {typeof children === "function"
         ? children({
             theme,
             cssModule,
-            changeTheme: () => setTheme(t => (t === "dark" ? "light" : "dark"))
+            changeTheme: () =>
+              setTheme(t => {
+                const nextState = t === "dark" ? "light" : "dark";
+
+                localStorage.setItem("browser-theme", nextState);
+
+                return nextState;
+              })
           })
         : children}
     </ThemeContext.Provider>
