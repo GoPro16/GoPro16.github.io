@@ -1,27 +1,32 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-  useMemo
-} from "react";
+import React, { createContext, useState, useContext, useEffect, useMemo } from "react";
 
 const themeConfig = isDark => ({
   "bg-color": isDark ? "bg-dark" : "bg-light",
-  "text-color": isDark ? "text-white" : "text-dark"
+  "text-color": isDark ? 'text-white' : 'text-dark'
 });
 
-const ThemeContext = createContext();
+let defaultTheme;
+
+try {
+  defaultTheme = localStorage.getItem("browser-theme") || 'dark'
+} catch(err) {
+  defaultTheme = 'dark'
+}
+
+const ThemeContext = createContext([
+  defaultTheme,
+  themeConfig(defaultTheme === "dark")
+]);
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(
-    (localStorage && localStorage.getItem("browser-theme")) || "dark"
-  );
+  const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
-    if (localStorage && localStorage.getItem("browser-theme") !== theme) {
-      localStorage.setItem("browser-theme", theme);
-    }
+    try{
+      if (localStorage.getItem("browser-theme") !== theme) {
+        localStorage.setItem("browser-theme", theme);
+      }
+    }catch(err) {}
   }, [theme]);
 
   const cssModule = useMemo(() => themeConfig(theme === "dark"), [theme]);
