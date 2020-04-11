@@ -20,6 +20,7 @@ const ThemeProvider = ({ children }) => {
     try {
       return window.__theme;
     } catch (err) {
+      console.error(err)
       return "dark";
     }
   });
