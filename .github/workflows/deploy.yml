@@ -33,3 +33,5 @@ jobs:
           commit_message: deployed docs [skip ci]
           committer_name: ${{ secrets.GH_USER }}
           committer_email: ${{ secrets.GH_EMAIL }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.token }}
