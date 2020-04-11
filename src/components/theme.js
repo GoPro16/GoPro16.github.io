@@ -23,7 +23,7 @@ const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      setTheme(localStorage.getItem("browser-theme") !== theme);
+      setTheme(localStorage.getItem("browser-theme") || defaultTheme);
     } catch (err) {}
   }, []);
 
