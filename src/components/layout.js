@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Container, Util, Navbar } from "reactstrap";
+import { Container, Util } from "reactstrap";
 import Toggle from "react-toggle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThemeProvider from "./theme";
@@ -22,6 +22,7 @@ const Layout = ({ children }) => (
               icons={{
                 unchecked: (
                   <img
+                    alt="sun"
                     src={sun}
                     width="16"
                     height="16"
@@ -31,6 +32,7 @@ const Layout = ({ children }) => (
                 ),
                 checked: (
                   <img
+                    alt='moon'
                     src={moon}
                     width="16"
                     height="16"

@@ -19,14 +19,13 @@ const ThemeContext = createContext([
 ]);
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    try {
-      return localStorage.getItem("browser-theme");
-    } catch (err) {
-      return "dark";
-    }
-  });
+  const [theme, setTheme] = useState(window.__theme);
 
+  useEffect(() => {
+    window._onThemeChange = () => {
+      setTheme(window.__theme);
+    };
+  }, []);
 
   const cssModule = useMemo(() => themeConfig(theme === "dark"), [theme]);
 
@@ -39,7 +38,7 @@ const ThemeProvider = ({ children }) => {
           setTheme(t => {
             const nextState = t === "dark" ? "light" : "dark";
 
-            localStorage.setItem("browser-theme", nextState);
+            window.__setPreferredTheme(nextState);
 
             return nextState;
           })
@@ -53,7 +52,7 @@ const ThemeProvider = ({ children }) => {
               setTheme(t => {
                 const nextState = t === "dark" ? "light" : "dark";
 
-                localStorage.setItem("browser-theme", nextState);
+                window.__setPreferredTheme(nextState);
 
                 return nextState;
               })

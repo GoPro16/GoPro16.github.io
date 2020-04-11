@@ -50,22 +50,35 @@ const Profile = () => {
       <div style={{ maxWidth: 500 }}>
         <Image />
         <h1 className="mt-3 text-center font-weight-bold">Kyle Gray</h1>
-        <aside className="text-center">Software Engineer 👷🏻‍♂️</aside>
+        <aside className="text-center">Software Engineer <span role="img" aria-label="construction worker">👷🏻‍♂️</span></aside>
         <div className="d-flex flex-row justify-content-between w-100 mt-3 border-top pt-3">
-          <Link className="text-color" href="mailto:kgray1497@gmail.com">
-            <FaEnvelope size={25} />
-          </Link>
-          <Link className="text-color" href="https://twitter.com/kyle_a_gray">
-            <FaTwitter size={25} />
-          </Link>
-          <Link className="text-color" href="https://github.com/GoPro16">
-            <FaGithub size={25} />
+          <Link
+            aria-label="email"
+            className="text-color"
+            href="mailto:kgray1497@gmail.com"
+          >
+            <FaEnvelope aria-hidden="true" size={25} />
           </Link>
           <Link
+            aria-label="twitter"
+            className="text-color"
+            href="https://twitter.com/kyle_a_gray"
+          >
+            <FaTwitter aria-hidden="true" size={25} />
+          </Link>
+          <Link
+            aria-label="github"
+            className="text-color"
+            href="https://github.com/GoPro16"
+          >
+            <FaGithub aria-hidden="true" size={25} />
+          </Link>
+          <Link
+            aria-label="linkedin"
             className="text-color"
             href="https://www.linkedin.com/in/kyle-gray16/"
           >
-            <FaLinkedin size={25} />
+            <FaLinkedin aria-hidden="true" size={25} />
           </Link>
         </div>
       </div>
@@ -76,7 +89,7 @@ const Profile = () => {
 const IndexPage = () => (
   <Layout>
     <Profile />
-    <SEO title="Home" lang="en"  />
+    <SEO title="Home" lang="en" />
   </Layout>
 );
 
