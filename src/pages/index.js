@@ -76,7 +76,7 @@ const Profile = () => {
 const IndexPage = () => (
   <Layout>
     <Profile />
-    <SEO />
+    <SEO title="Home" lang="en"  />
   </Layout>
 );
 
