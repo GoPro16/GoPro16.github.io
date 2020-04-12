@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Container, Util } from "reactstrap";
+import { Container } from "reactstrap";
 import Toggle from "react-toggle";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ThemeProvider from "./theme";
 
-import "./layout.css";
+import "./layout.scss";
 
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
 
-const Layout = ({ children }) => (
-  <ThemeProvider>
-    {({ theme, cssModule, changeTheme }) => (
-      <div className={Util.mapToCssModules("bg-color h-100 d-flex flex-column", cssModule)}>
-        <div className={`nav-${theme}`}>
-          <div className="w-100 d-flex justify-content-end align-items-center py-3 pr-5">
+const Layout = ({ children }) => {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    window.__onThemeChange = () => {
+      setTheme(window.__theme);
+    };
+
+    setTheme(window.__theme);
+  }, []);
+
+  return (
+    <div className="bg-color h-100 d-flex flex-column">
+      <div className="top-nav">
+        <div className="w-100 d-flex justify-content-end align-items-center py-3 pr-5">
+          {theme !== null && (
             <Toggle
               checked={theme === "dark"}
-              onChange={changeTheme}
+              onChange={(e) => {
+                window.__setPreferredTheme(e.target.checked  ? "dark" : "light");
+              }}
               icons={{
                 unchecked: (
                   <img
@@ -32,7 +43,7 @@ const Layout = ({ children }) => (
                 ),
                 checked: (
                   <img
-                    alt='moon'
+                    alt="moon"
                     src={moon}
                     width="16"
                     height="16"
@@ -42,15 +53,13 @@ const Layout = ({ children }) => (
                 )
               }}
             />
-          </div>
+          )}
         </div>
-        <Container className="flex-fill d-flex flex-column" cssModule={cssModule}>
-          {children}
-        </Container>
       </div>
-    )}
-  </ThemeProvider>
-);
+      <Container className="flex-fill d-flex flex-column">{children}</Container>
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired

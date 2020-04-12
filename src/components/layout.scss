@@ -160,10 +160,26 @@ html,body, #___gatsby, #gatsby-focus-wrapper {
   width: 300px;
 }
 
-.nav-dark {
-  background-color: #313131;
+/* dark theme */
+body.dark {
+  .top-nav {
+    background-color: #313131;
+  }
+  .bg-color {
+    background-color: #232323;
+  }
+  .text-color {
+    color: white;
+  }
 }
-
-.nav-light {
-  background-color: #e4e4e4;
+body.light {
+  .top-nav {
+    background-color: #e4e4e4;
+  }
+  .bg-color {
+    background-color: #f8f8f8;
+  }
+  .text-color {
+    color: #232323;
+  }
 }
