@@ -21,7 +21,9 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div className="bg-color h-100 d-flex flex-column">
+    <div className="bg-color h-100 d-flex flex-column" style={{
+      transition: 'color 0.5s ease-out, background 0.2s ease-out'
+    }}>
       <div className="top-nav">
         <div className="w-100 d-flex justify-content-end align-items-center py-3 pr-5" style={{minHeight:56}}>
           {theme !== null && (
